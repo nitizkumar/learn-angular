@@ -26,8 +26,14 @@ module.directive('status', function () {
         scope:{
             name:'@'
         },
-        controller: function($scope){
+        controller: function($scope,$element,$attrs){
             console.log($scope.name);
+            var dead = ['Eddard','Robb'];
+            if(dead.indexOf($scope.name) === -1){
+                $element.addClass('alive');
+            }else{
+                $element.addClass('dead');
+            }
         }
     }
 });
