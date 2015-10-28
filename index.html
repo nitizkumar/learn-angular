@@ -11,7 +11,7 @@
 Hello {{firstName}} {{lastName}}
 
 <ul>
-    <li ng-repeat="i in items">{{i.name}}</li>
+    <li ng-repeat="i in items" status name="{{i.name}}">{{i.name}}</li>
 </ul>
 
 <div ng-controller="greetingController">

@@ -19,3 +19,15 @@ module.controller('testController',['$scope',function($scope){
 module.controller('greetingController',['$scope',function($scope) {
     $scope.greeting = 'Good Morning';
 }]);
+
+module.directive('status', function () {
+    return{
+        restrict:'A',
+        scope:{
+            name:'@'
+        },
+        controller: function($scope){
+            console.log($scope.name);
+        }
+    }
+});
